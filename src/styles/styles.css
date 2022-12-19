@@ -1,3 +1,10 @@
+:root{
+    --gray-900: #F3F3F3;
+    --gray-500: #9E9E9E;
+
+    --purple-500: #6154F0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,12 +24,14 @@ body, html{
 
 .aside-container{
     height: 100%;
-    background-color: #F3F3F3;
+    background-color: var(--gray-900);
+    padding: 2rem 3.3125rem 0 2.5rem;
 }
 
 .aside-header{
     display: flex;
     gap: 0.625rem;
+    margin: 0 0 3.9375rem 0;
 }
 
 .aside-title{
@@ -32,19 +41,34 @@ body, html{
 }
 
 .aside-menu{
-
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .menu-item{
     display: flex;
     gap: 1.25rem;
+    align-items: center;
     text-decoration: none;
-    color: #9E9E9E;
+    color: var(--gray-500);
     font-size: 0.875rem;
     line-height: 1.3125rem;
+    transition: color 0.2s ;
+}
+.menu-item:hover{
+    color: var(--purple-500)
 }
 
 .selected{
-    color: #6154F0;
+    color: var(--purple-500);
     font-weight: 600;
+}
+.selected img{
+    filter: invert(37%) sepia(67%) saturate(5337%) hue-rotate(235deg) brightness(98%) contrast(93%); 
+    /* Purple color, refers to Var (--purple-500), HEX Code: #6154F0 */
+}
+.selected::after{
+    content: "●";
+    margin: 0 0 0 3.375rem;
 }
