@@ -5,10 +5,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.jquery.com/jquery-3.6.2.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="./main.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
     <title>Crypto Jquery</title>
@@ -51,8 +54,88 @@
                 </a>
             </div>
         </div>
-        <main>
-            
+        <main class="main-container">
+            <div class="main-header">
+                <div class="main-resume-coins">
+                    <div class="card-coin">
+                        <div class="header-coin">
+                            <img src="./assets/icon-bitcoin.svg">
+                            <div class="header-side">
+                                <img src="./assets/icon-arrow-up.svg" alt="">
+                                <p>+ 0.25%</p>
+                            </div>
+                        </div>
+                        <div class="footer-coin">
+                            <p class="price-coin">
+                                $ 40,291
+                            </p>
+                            <p class="name-coin">
+                                Bitcoin - BTC
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-coin">
+                        <div class="header-coin">
+                            <img src="./assets/icon-ethereum.svg">
+                            <div class="header-side">
+                                <img src="./assets/icon-arrow-up.svg" alt="">
+                                <p>+ 0.25%</p>
+                            </div>
+                        </div>
+                        <div class="footer-coin">
+                            <p class="price-coin">
+                                $ 18,299
+                            </p>
+                            <p class="name-coin">
+                                Ethereum - ETH
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-coin">
+                        <div class="header-coin">
+                            <img src="./assets/icon-litecoin.svg">
+                            <div class="header-side">
+                                <img src="./assets/icon-arrow-up.svg" alt="">
+                                <p>+ 0.25%</p>
+                            </div>
+                        </div>
+                        <div class="footer-coin">
+                            <p class="price-coin">
+                                $ 8,340
+                            </p>
+                            <p class="name-coin">
+                                Litecoin - ITL
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-coin">
+                        <div class="header-coin">
+                            <img src="./assets/icon-cardano.svg">
+                            <div class="header-side down">
+                                <img src="./assets/icon-arrow-dowm.svg" alt="">
+                                <p>- 2.05%</p>
+                            </div>
+                        </div>
+                        <div class="footer-coin">
+                            <p class="price-coin">
+                                $ 3,291
+                            </p>
+                            <p class="name-coin">
+                                Cardano - ADA
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="chartContainer" class="chart-container"></div>
+            </div>
+            <div class="main-footer">
+                <div class="main-live-market">
+                    
+                </div>
+                <div class="main-transactions">
+
+                </div>
+            </div>
         </main>
     </div>
 </body>

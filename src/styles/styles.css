@@ -3,6 +3,13 @@
     --gray-500: #9E9E9E;
 
     --purple-500: #6154F0;
+
+    --green-500: #1ECB4F;
+
+    --text-900: #9E9E9E;
+    --text-100: #1A1A1A;
+
+    --orange-700: #FF8D4D;
 }
 
 *{
@@ -71,4 +78,69 @@ body, html{
 .selected::after{
     content: "●";
     margin: 0 0 0 3.375rem;
+}
+
+.main-container{
+    display: flex;
+    padding: 6.125rem 2.6875rem;
+}
+
+.main-header{
+    display: flex;
+}
+
+.main-resume-coins{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875;
+    max-width: 40rem;
+}
+
+.card-coin{
+    width: 15.75rem;
+    padding: 2rem 1.875rem 1.8125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header-coin{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-side{
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-weight: 500;
+    line-height: 1.403125rem;
+    font-size: 0.875rem;
+    color: var(--green-500);
+}
+.down{
+    color: var(--orange-700);
+}
+
+.footer-coint{
+    display: flex;
+    flex-direction: column;
+}
+
+.price-coin{
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 2.625rem;
+    color: var(--text-100);
+}
+
+.name-coin{
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    color: var(--text-900);
+}
+
+.chart-container{
+    width: 33.375rem;
+    height: 10.625rem;
 }
