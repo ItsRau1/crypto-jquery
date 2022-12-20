@@ -22,6 +22,7 @@ body, html{
     height: 100%;
     width: 100%;
     font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
 }
 
 .container{
@@ -82,7 +83,8 @@ body, html{
 
 .main-container{
     display: flex;
-    padding: 6.125rem 2.6875rem;
+    flex-direction: column;
+    padding: 4rem 2.6875rem;
 }
 
 .main-header{
@@ -92,13 +94,11 @@ body, html{
 .main-resume-coins{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.875;
+    gap: 1.875rem;
     max-width: 40rem;
 }
 
 .card-coin{
-    width: 15.75rem;
-    padding: 2rem 1.875rem 1.8125rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -117,9 +117,10 @@ body, html{
     line-height: 1.403125rem;
     font-size: 0.875rem;
     color: var(--green-500);
+    margin: 0 0 0 3.8125rem;
 }
 .down{
-    color: var(--orange-700);
+    color: var(--orange-700) !important;
 }
 
 .footer-coint{
@@ -142,5 +143,80 @@ body, html{
 
 .chart-container{
     width: 33.375rem;
-    height: 10.625rem;
+    height: 18.625rem;
+}
+
+.title-live-market{
+    display: flex;
+    color: var(--text-100);
+    font-size: 1.3125rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin: 2rem 0 1.625rem;
+}
+
+.item-live-market{
+    display: flex;
+    gap: 3.875rem;
+    margin: 0 0 2rem;
+}
+
+.item-live-head{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.item-live-market-title-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    color: var(--text-900);
+}
+.item-live-market-name-coin{
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--text-100);
+    opacity: 0.8;
+}
+
+.item-live-market-change-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    color: var(--green-500);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    opacity: 0.8;
+}
+.item-live-market-subtitle{
+    font-size: 0.75rem;
+    color: var(--text-900);
+    line-height: 1.125rem;
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+}
+
+.item-live-market-price-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    letter-spacing: 0.02rem;
+    color: var(--text-100);
+    opacity: 0.8;
+}
+
+.miniChartContainer{
+    width: 10.125rem;
+    height: 4rem;
 }
