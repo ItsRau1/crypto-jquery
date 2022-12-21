@@ -1,5 +1,5 @@
-window.onload = function () {
-	var chart = new CanvasJS.Chart("chartContainer", {
+$(document).ready(function() {
+    var chart = new CanvasJS.Chart("chartContainer", {
         title:{
             text: "Statistic",
             horizontalAlign: 2,
@@ -180,6 +180,7 @@ window.onload = function () {
 		]
 	});
 	miniChart4.render();
-}
+})
+
 
 
