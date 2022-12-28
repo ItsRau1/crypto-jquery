@@ -84,7 +84,8 @@ body, html{
 .main-container{
     display: flex;
     flex-direction: column;
-    padding: 4rem 0 0 2.6875rem;
+    gap: 5rem;
+    padding: 8rem 0 0 5rem;
 }
 
 .main-header{
@@ -188,11 +189,14 @@ body, html{
     align-items: flex-start;
     justify-content: space-between;
 
-    color: var(--green-500);
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.5rem;
     opacity: 0.8;
+}
+
+.up{
+    color: var(--green-500);
 }
 .item-live-market-subtitle{
     font-size: 0.75rem;
@@ -223,7 +227,6 @@ body, html{
 .main-footer{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .footer-content{
     display: flex;

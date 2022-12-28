@@ -10,8 +10,8 @@ jQuery.get("https://api.binance.com/api/v3/ticker/24hr", function(res){
         cardCoin = cardCoin + '<div class="card-coin">'
         cardCoin = cardCoin +   '<div class="header-coin">'
         cardCoin = cardCoin +       '<img src="./assets/icon-' + item.symbol +'.svg">'
-        cardCoin = cardCoin +       '<div class="header-side down">'
-        cardCoin = cardCoin +           '<img src="./assets/icon-arrow-dowm.svg" alt="">'
+        cardCoin = cardCoin +        checkStateCard(item.priceChangePercent)
+        cardCoin = cardCoin +           checkStateIcon(item.priceChangePercent)
         cardCoin = cardCoin +           '<p>' + item.priceChangePercent + '</p>'
         cardCoin = cardCoin +       '</div>'
         cardCoin = cardCoin +   '</div>'
@@ -36,7 +36,7 @@ jQuery.get("https://api.binance.com/api/v3/ticker/24hr", function(res){
         itemLiveMarket = itemLiveMarket +           '<p>' + item.symbol.replace("USDT", "") + '/ USDT </p>'
         itemLiveMarket = itemLiveMarket +       '</div>'
         itemLiveMarket = itemLiveMarket +   '</div>'
-        itemLiveMarket = itemLiveMarket +   '<div class="item-live-market-change-box">'
+        itemLiveMarket = itemLiveMarket +    checkStateLM(item.priceChangePercent)
         itemLiveMarket = itemLiveMarket +       '<p class="item-live-market-subtitle">Change</p>'
         itemLiveMarket = itemLiveMarket +       '<p>' + item.priceChangePercent + '</p>'
         itemLiveMarket = itemLiveMarket +   '</div>'
@@ -45,9 +45,34 @@ jQuery.get("https://api.binance.com/api/v3/ticker/24hr", function(res){
         itemLiveMarket = itemLiveMarket +       '<p>' + new Intl.NumberFormat().format(Number(item.lastPrice)) + ' USD</p>'
         itemLiveMarket = itemLiveMarket +   '</div>'
         itemLiveMarket = itemLiveMarket + '</div>'
+
+
     })
 
     $("#main-live-market").html(itemLiveMarket)
 })
 
+function checkStateLM(item){
+    if(item .includes("-")){ 
+        return '<div class="item-live-market-change-box down">' 
+    } else { 
+        return '<div class="item-live-market-change-box up">' 
+    }
+}
+
+function checkStateCard(item){
+    if(item .includes("-")){ 
+        return '<div class="header-side down">'
+    } else { 
+        return '<div class="header-side up">'
+    }
+}
+
+function checkStateIcon(item){
+    if(item .includes("-")){ 
+        return '<img src="./assets/icon-arrow-dowm.svg" alt="">'
+    } else { 
+        return '<img src="./assets/icon-arrow-up.svg" alt="">'
+    }
+}
 // .match(/^-?\d+(?:\.\d{0,2})?/)[0]
